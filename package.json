@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "readium-ng-workspace",
+  "version": "0.0.0",
+  "devDependencies": {
+    "lerna": "^2.8.0"
+  },
+  "scripts": {
+    "postinstall": "lerna bootstrap && lerna link"
+  }
+}

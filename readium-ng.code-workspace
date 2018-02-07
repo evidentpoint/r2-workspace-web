@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "readium-ng-viewer"
+		},
+		{
+			"path": "readium-ng"
+		},
+		{
+			"path": "readium-shared-js"
+		},
+		{
+			"path": "readium-cfi-js"
+		}
+	],
+	"settings": {}
+}
