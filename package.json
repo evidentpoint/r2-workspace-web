@@ -6,6 +6,7 @@
     "lerna": "^2.8.0"
   },
   "scripts": {
-    "postinstall": "lerna bootstrap && lerna link"
+    "postinstall": "lerna bootstrap && lerna link",
+    "build": "lerna run build --concurrency 1"
   }
 }
