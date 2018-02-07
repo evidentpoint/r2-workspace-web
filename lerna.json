@@ -1,10 +1,10 @@
 {
   "lerna": "2.8.0",
   "packages": [
-    "readium-ng-viewer",
-    "readium-ng",
+    "readium-cfi-js",
     "readium-shared-js",
-    "readium-cfi-js"
+    "readium-ng",
+    "readium-ng-viewer"
   ],
   "commands": {
     "link": {
