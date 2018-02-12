@@ -3,10 +3,22 @@
   "name": "readium-ng-workspace",
   "version": "0.0.0",
   "devDependencies": {
-    "lerna": "^2.8.0"
+    "lerna": "^2.8.0",
+    "npm-run-all": "^4.1.2",
+    "stmux": "^1.4.19"
   },
   "scripts": {
     "postinstall": "lerna bootstrap && lerna link",
-    "build": "lerna run build --concurrency 1"
+    "build": "npm-run-all --serial build:**",
+    "shell": "stmux -t \"readium-ng-workspace - shell\" -f stmux-shell.config",
+    "watch": "stmux -M -t \"readium-ng-workspace - watch\" -f stmux-watch.config",
+    "watch:readium-cfi-js": "cd readium-cfi-js && npm run watch",
+    "watch:readium-shared-js": "cd readium-shared-js && npm run watch",
+    "watch:readium-ng": "cd readium-ng && npm run watch",
+    "watch:readium-ng-viewer": "cd readium-ng-viewer && npm run watch",
+    "build:readium-cfi-js": "cd readium-cfi-js && npm run build",
+    "build:readium-shared-js": "cd readium-shared-js && npm run build:styles && npm run build:scripts:umd --readium-shared-js:RJS_UGLY=no",
+    "build:readium-ng": "cd readium-ng && npm run build",
+    "build:readium-ng-viewer": "cd readium-ng-viewer && npm run build"
   }
 }
