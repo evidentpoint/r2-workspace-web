@@ -3,6 +3,7 @@
   "packages": [
     "readium-cfi-js",
     "readium-shared-js",
+    "r2-shared-js",
     "readium-ng",
     "readium-ng-viewer"
   ],

@@ -8,17 +8,25 @@
     "stmux": "^1.4.19"
   },
   "scripts": {
-    "postinstall": "lerna bootstrap && lerna link",
+    "postinstall": "npm-run-all --serial clone:** && lerna bootstrap && lerna link",
     "build": "npm-run-all --serial build:**",
-    "shell": "stmux -t \"readium-ng-workspace - shell\" -f stmux-shell.config",
-    "watch": "stmux -M -t \"readium-ng-workspace - watch\" -f stmux-watch.config",
+    "shell": "stmux -a s -t \"readium-ng-workspace - shell\" -f stmux-shell.config",
+    "watch": "stmux -M -a s -t \"readium-ng-workspace - watch\" -f stmux-watch.config",
+    "start": "stmux -M -a s -t \"readium-ng-workspace - start\" -f stmux-start.config",
     "watch:readium-cfi-js": "cd readium-cfi-js && npm run watch",
     "watch:readium-shared-js": "cd readium-shared-js && npm run watch",
     "watch:readium-ng": "cd readium-ng && npm run watch",
     "watch:readium-ng-viewer": "cd readium-ng-viewer && npm run watch",
+    "start:readium-ng-viewer": "cd readium-ng-viewer && npm run start",
     "build:readium-cfi-js": "cd readium-cfi-js && npm run build",
     "build:readium-shared-js": "cd readium-shared-js && npm run build:styles && npm run build:scripts:umd --readium-shared-js:RJS_UGLY=no",
+    "build:r2-shared-js": "cd r2-shared-js && npm run build:es5",
     "build:readium-ng": "cd readium-ng && npm run build",
-    "build:readium-ng-viewer": "cd readium-ng-viewer && npm run build"
+    "build:readium-ng-viewer": "cd readium-ng-viewer && npm run build",
+    "clone:readium-cfi-js": "[ ! -d readium-cfi-js ] && git clone -b feature/es-refactor git@github.com:readium/readium-cfi-js.git || :",
+    "clone:readium-shared-js": "[ ! -d readium-shared-js ] && git clone -b feature/readium-ng git@github.com:readium/readium-shared-js.git || :",
+    "clone:r2-shared-js": "[ ! -d r2-shared-js ] && git clone git@github.com:evidentpoint/r2-shared-js.git || :",
+    "clone:readium-ng": "[ ! -d readium-ng ] && git clone git@github.com:evidentpoint/readium-ng.git || :",
+    "clone:readium-ng-viewer": "[ ! -d readium-ng-viewer ] && git clone git@github.com:evidentpoint/readium-ng-viewer.git || :"
   }
 }
