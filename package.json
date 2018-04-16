@@ -3,7 +3,7 @@
   "name": "readium-ng-workspace",
   "version": "0.0.0",
   "devDependencies": {
-    "lerna": "^2.9.0",
+    "lerna": "^2.10.1",
     "npm-run-all": "^4.1.2",
     "stmux": "^1.4.19"
   },
@@ -25,7 +25,7 @@
     "build:r2-shared-js": "cd r2-shared-js && npm run build:es5",
     "build:readium-ng": "cd readium-ng && npm run build",
     "build:readium-ng-viewer": "cd readium-ng-viewer && npm run build",
-    "clone:readium-cfi-js": "[ ! -d readium-cfi-js ] && git clone -b feature/es-refactor git@github.com:readium/readium-cfi-js.git || :",
+    "clone:readium-cfi-js": "[ ! -d readium-cfi-js ] && git clone -b develop git@github.com:readium/readium-cfi-js.git || :",
     "clone:readium-shared-js": "[ ! -d readium-shared-js ] && git clone -b feature/readium-ng git@github.com:readium/readium-shared-js.git || :",
     "clone:r2-utils-js": "[ ! -d r2-utils-js ] && git clone git@github.com:evidentpoint/r2-utils-js.git || :",
     "clone:r2-lcp-js": "[ ! -d r2-lcp-js ] && git clone git@github.com:evidentpoint/r2-lcp-js.git || :",
