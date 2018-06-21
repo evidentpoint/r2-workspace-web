@@ -3,23 +3,21 @@
   "name": "readium-ng-workspace",
   "version": "0.0.0",
   "devDependencies": {
-    "lerna": "^2.10.1",
-    "npm-run-all": "^4.1.2",
-    "stmux": "^1.4.19"
+    "concurrently": "^3.6.0",
+    "npm-run-all": "^4.1.2"
   },
   "scripts": {
-    "postinstall": "npm-run-all --serial clone:** && lerna bootstrap && lerna link",
+    "preinstall": "npm run clone:readium-cfi-js && npm run clone:readium-shared-js && npm run clone:r2-utils-js && npm run clone:r2-lcp-js && npm run clone:r2-shared-js && npm run clone:readium-ng && npm run clone:readium-ng-viewer",
     "build": "npm-run-all --serial build:**",
-    "shell": "stmux -a s -t \"readium-ng-workspace - shell\" -f stmux-shell.config",
-    "watch": "stmux -M -a s -t \"readium-ng-workspace - watch\" -f stmux-watch.config",
-    "start": "stmux -M -a s -t \"readium-ng-workspace - start\" -f stmux-start.config",
+    "watch": "concurrently \"npm:watch:*\" \"npm:watch-app:*\"",
+    "start": "concurrently \"npm:watch:*\" \"npm:start-app:*\"",
     "watch:readium-cfi-js": "cd readium-cfi-js && npm run watch",
     "watch:readium-shared-js": "cd readium-shared-js && npm run watch",
     "watch:readium-ng": "cd readium-ng && npm run watch",
-    "watch:readium-ng-viewer": "cd readium-ng-viewer && npm run watch",
-    "start:readium-ng-viewer": "cd readium-ng-viewer && npm run start",
+    "watch-app:readium-ng-viewer": "cd readium-ng-viewer && npm run watch",
+    "start-app:readium-ng-viewer": "cd readium-ng-viewer && npm run start",
     "build:readium-cfi-js": "cd readium-cfi-js && npm run build",
-    "build:readium-shared-js": "cd readium-shared-js && npm run build:styles && npm run build:scripts:umd --readium-shared-js:RJS_UGLY=no",
+    "build:readium-shared-js": "cd readium-shared-js && npm run build",
     "build:r2-utils-js": "cd r2-utils-js && npm run build:es5",
     "build:r2-lcp-js": "cd r2-lcp-js && npm run build:es5",
     "build:r2-shared-js": "cd r2-shared-js && npm run build:es5",
@@ -32,5 +30,26 @@
     "clone:r2-shared-js": "[ ! -d r2-shared-js ] && git clone git@github.com:evidentpoint/r2-shared-js.git || :",
     "clone:readium-ng": "[ ! -d readium-ng ] && git clone git@github.com:evidentpoint/readium-ng.git || :",
     "clone:readium-ng-viewer": "[ ! -d readium-ng-viewer ] && git clone git@github.com:evidentpoint/readium-ng-viewer.git || :"
+  },
+  "workspaces": {
+    "packages": [
+      "readium-cfi-js",
+      "readium-shared-js",
+      "r2-utils-js",
+      "r2-lcp-js",
+      "r2-shared-js",
+      "readium-ng",
+      "readium-ng-viewer"
+    ],
+    "nohoist": [
+      "**/r2-opds-js",
+      "**/r2-opds-js/**",
+      "**/r2-lcp-js",
+      "**/r2-lcp-js/**",
+      "**/r2-utils-js",
+      "**/r2-utils-js/**",
+      "**/ta-json",
+      "**/ta-json/**"
+    ]
   }
 }
