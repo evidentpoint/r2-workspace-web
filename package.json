@@ -24,7 +24,7 @@
     "build:readium-ng": "cd readium-ng && npm run build",
     "build:readium-ng-viewer": "cd readium-ng-viewer && npm run build",
     "clone:readium-cfi-js": "[ ! -d readium-cfi-js ] && git clone -b develop git@github.com:readium/readium-cfi-js.git || :",
-    "clone:readium-shared-js": "[ ! -d readium-shared-js ] && git clone -b feature/readium-ng git@github.com:readium/readium-shared-js.git || :",
+    "clone:readium-shared-js": "[ ! -d readium-shared-js ] && git clone -b feature/readium-ng git@github.com:evidentpoint/readium-shared-js.git || :",
     "clone:r2-utils-js": "[ ! -d r2-utils-js ] && git clone git@github.com:evidentpoint/r2-utils-js.git || :",
     "clone:r2-lcp-js": "[ ! -d r2-lcp-js ] && git clone git@github.com:evidentpoint/r2-lcp-js.git || :",
     "clone:r2-shared-js": "[ ! -d r2-shared-js ] && git clone git@github.com:evidentpoint/r2-shared-js.git || :",
