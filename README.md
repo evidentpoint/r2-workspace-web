@@ -6,7 +6,7 @@ This is a meta-project for bootstrapping together Readium NG projects and Readiu
 - Yarn
 - Node 10+
 
-## Set up
+## Getting started
 1. Clone this repository
 2. Run `yarn`
     - This may take a while longer than expected since it will be cloning other repositories into the root folder.
