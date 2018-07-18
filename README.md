@@ -2,8 +2,8 @@
 This is a meta-project for bootstrapping together Readium NG projects and Readium 2 dependent projects.
 
 ## Requirements
-- SSH Key-based authentication working with Git and Github.
-- Yarn
+- [SSH Key-based authentication working with Git and Github.](https://help.github.com/articles/connecting-to-github-with-ssh/)
+- [Yarn](https://yarnpkg.com/en/docs/install)
 - Node 10+
 
 ## Getting started
