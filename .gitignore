@@ -1,8 +1,6 @@
 node_modules
-readium-ng-viewer/
-readium-ng/
-readium-shared-js/
-readium-cfi-js/
+r2-testapp-web/
+r2-navigator-web/
 r2-shared-js/
 r2-lcp-js/
 r2-utils-js/

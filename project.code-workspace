@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "r2-navigator-web"
+		},
+		{
+			"path": "r2-testapp-web"
+		},
+		{
+			"path": "r2-shared-js"
+		},
+		{
+			"path": "r2-utils-js"
+		}
+	],
+	"settings": {}
+}
