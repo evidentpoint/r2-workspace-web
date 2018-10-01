@@ -24,7 +24,7 @@
     "clone:r2-shared-js": "[ ! -d r2-shared-js ] && git clone git@github.com:evidentpoint/r2-shared-js.git || :",
     "clone:r2-navigator-web": "[ ! -d r2-navigator-web ] && git clone git@github.com:evidentpoint/r2-navigator-web.git || :",
     "clone:r2-testapp-web": "[ ! -d r2-testapp-web ] && git clone git@github.com:evidentpoint/r2-testapp-web.git || :",
-    "clean:npm": "rm -rf ./**/node_modules && rm -rf ./**/yarn.lock"
+    "clean:npm": "rm -rf ./node_modules && rm -rf ./**/node_modules && rm -rf ./**/yarn.lock"
   },
   "workspaces": {
     "packages": [
