@@ -7,7 +7,7 @@
     "npm-run-all": "^4.1.2"
   },
   "scripts": {
-    "preinstall": "npm run clone:r2-utils-js && npm run clone:r2-lcp-js && npm run clone:r2-shared-js && npm run clone:r2-navigator-web && npm run clone:r2-testapp-web",
+    "preinstall": "npm run clone:r2-utils-js && npm run clone:r2-lcp-js && npm run clone:r2-shared-js && npm run clone:r2-glue-js && npm run clone:r2-navigator-web && npm run clone:r2-testapp-web",
     "build": "npm-run-all --serial build:**",
     "watch": "npm run build && concurrently \"npm:watch:*\" \"npm:watch-app:*\"",
     "start": "npm run build && concurrently \"npm:watch:*\" \"npm:start-app:*\"",
@@ -22,6 +22,7 @@
     "clone:r2-utils-js": "[ ! -d r2-utils-js ] && git clone git@github.com:evidentpoint/r2-utils-js.git || :",
     "clone:r2-lcp-js": "[ ! -d r2-lcp-js ] && git clone git@github.com:evidentpoint/r2-lcp-js.git || :",
     "clone:r2-shared-js": "[ ! -d r2-shared-js ] && git clone git@github.com:evidentpoint/r2-shared-js.git || :",
+    "clone:r2-glue-js": "[ ! -d r2-glue-js ] && git clone git@github.com:evidentpoint/r2-glue-js.git || :",
     "clone:r2-navigator-web": "[ ! -d r2-navigator-web ] && git clone git@github.com:evidentpoint/r2-navigator-web.git || :",
     "clone:r2-testapp-web": "[ ! -d r2-testapp-web ] && git clone git@github.com:evidentpoint/r2-testapp-web.git || :",
     "clean:npm": "rm -rf ./node_modules && rm -rf ./**/node_modules && rm -rf ./**/yarn.lock"
@@ -31,6 +32,7 @@
       "r2-utils-js",
       "r2-lcp-js",
       "r2-shared-js",
+      "r2-glue-js",
       "r2-navigator-web",
       "r2-testapp-web"
     ],

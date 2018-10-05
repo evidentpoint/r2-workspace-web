@@ -7,6 +7,9 @@
 			"path": "r2-testapp-web"
 		},
 		{
+			"path": "r2-glue-js"
+		},
+		{
 			"path": "r2-shared-js"
 		},
 		{
