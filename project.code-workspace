@@ -10,10 +10,7 @@
 			"path": "r2-glue-js"
 		},
 		{
-			"path": "r2-shared-js"
-		},
-		{
-			"path": "r2-utils-js"
+			"path": "r2-webpub-model-js"
 		}
 	],
 	"settings": {}
