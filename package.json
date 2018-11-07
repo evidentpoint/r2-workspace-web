@@ -15,6 +15,7 @@
     "watch-app:r2-testapp-web": "cd r2-testapp-web && npm run watch",
     "start-app:r2-testapp-web": "cd r2-testapp-web && npm run start",
     "build:r2-webpub-model-js": "cd r2-webpub-model-js && npm run build",
+    "build:r2-glue-js": "cd r2-glue-js && npm run build",
     "build:r2-navigator-web": "cd r2-navigator-web && npm run build",
     "build:r2-testapp-web": "cd r2-testapp-web && npm run build",
     "clone:r2-webpub-model-js": "[ ! -d r2-webpub-model-js ] && git clone git@github.com:evidentpoint/r2-webpub-model-js.git || :",
