@@ -30,6 +30,15 @@
       "r2-navigator-web",
       "r2-testapp-web"
     ],
-    "nohoist": []
+    "nohoist": [
+      "**/r2-webpub-model-js",
+      "**/r2-webpub-model-js/**",
+      "**/r2-glue-js",
+      "**/r2-glue-js/**",
+      "**/r2-navigator-web",
+      "**/r2-navigator-web/**",
+      "**/r2-testapp-web",
+      "**/r2-testapp-web/**"
+    ]
   }
 }
