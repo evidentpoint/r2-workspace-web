@@ -32,14 +32,14 @@
       "r2-testapp-web"
     ],
     "nohoist": [
-      "**/r2-webpub-model-js",
-      "**/r2-webpub-model-js/**",
+      "**/@readium/shared-models",
+      "**/@readium/shared-models/**",
       "**/r2-glue-js",
       "**/r2-glue-js/**",
-      "**/r2-navigator-web",
-      "**/r2-navigator-web/**",
-      "**/r2-testapp-web",
-      "**/r2-testapp-web/**"
+      "**/@readium/navigator-web",
+      "**/@readium/navigator-web/**",
+      "**/@readium/testapp-web",
+      "**/@readium/testapp-web/**"
     ]
   }
 }
